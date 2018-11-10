@@ -1,10 +1,10 @@
 #include <iostream>
 #include <vector>
 
-#include "SmallSpiralRegionSolver.cpp"
-#include "LargeSpiralRegionSolver.cpp"
+#include "smallSpiralRegionSolver.h"
+#include "largeSpiralRegionSolver.h"
 
-//
+
 int main() {
 
 	const std::vector<int> small_areas = 
@@ -14,7 +14,7 @@ int main() {
 	4, 3, 1, 2, 4,
 	3, 3, 3, 2, 2};
 	
-	SmallSpiralRegionSolver solver1(small_areas);
+	smallSpiralRegionSolver solver1(small_areas);
 
 	const std::vector<int> large_areas = 
 	{4,  4,  4,  5,  5, 11, 11, 20, 20, 20, 21, 21, 21, 21,
@@ -32,7 +32,7 @@ int main() {
 	 9,  10, 9, 10, 10, 10, 11, 11, 15, 15, 16, 16, 17, 11,
 	 9,  10, 10, 10,10, 10, 10, 11, 11, 11, 11, 11, 11, 11};
 
-	LargeSpiralRegionSolver solver2(large_areas);
+	largeSpiralRegionSolver solver2(large_areas);
 
 	std::cout << "Finished - type something to quit" << std::endl;
 	int dummy; std::cin >> dummy;
